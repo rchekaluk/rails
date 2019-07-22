@@ -39,6 +39,9 @@ module ActiveJob
         perform(*arguments)
       end
     rescue => exception
+puts "LOC1"
+p exception
+puts exception.message
       rescue_with_handler(exception) || raise
     end
 
